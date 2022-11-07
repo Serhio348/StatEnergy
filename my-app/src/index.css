@@ -1,0 +1,25 @@
+* {
+  --background-color: #d2d4d4;
+  --primary-color0: #000000;
+  /*color line*/
+  --line-color1: rgb(228, 228, 228, 1);
+  --line-color2: rgb(140, 137, 137);
+  --box-shadow-color1: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px ;
+  --header-color: #111111;
+  --text-color: #9c9ea2;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
