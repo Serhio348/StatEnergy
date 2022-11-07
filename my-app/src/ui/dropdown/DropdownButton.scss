@@ -1,0 +1,60 @@
+.Dropdown{
+    width: 100%;
+}
+
+.dropDownCatalog{
+  content:"";
+  position: absolute;  
+  bottom: -110px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  height: max-content;
+  width: max-content;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: var(--box-shadow-color1);
+  z-index: 103;
+
+
+  &.enter {
+    opacity: 0;
+  }
+
+  &.enter-active {
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+
+  &.exit {
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+
+  &.exit-active {
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  &-menu {
+    padding: 4px;
+
+&-item {
+  display: flex;
+    align-items: center;
+    margin: 3px;
+    padding: 0 16px;
+    min-height: 44px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s;
+
+    &:hover {
+      background-color: rgb(173, 172, 172);
+    }
+}
+
+  }
+}
