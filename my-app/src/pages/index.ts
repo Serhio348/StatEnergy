@@ -2,7 +2,9 @@ import Home from './Home';
 import Logout from './Logout';
 import Notifications from './Notifications';
 import Error from './Error';
-import CreateMessages from './messages/CreateMessage'
+import CreateMessage from './messages/CreateMessage'
+import RemovedMessages from './messages/RemovedMessages'
+import Messages from './messages/Messages'
 
 
 export {
@@ -10,5 +12,7 @@ export {
     Logout,
     Notifications,
     Error,
-
+    CreateMessage,
+    Messages,
+    RemovedMessages
 }

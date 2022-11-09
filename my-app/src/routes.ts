@@ -3,10 +3,13 @@ import {
     MdHome,
     MdLogout,
     MdNotifications,
-    MdSettings
+    MdSettings,
+    MdOutlineCreate,
+    MdEmail,
+    MdDeleteForever,
 
 } from 'react-icons/md'
-import { Home, Logout, Notifications } from './pages';
+import { Home, Logout, Notifications,Messages, CreateMessage,RemovedMessages} from './pages';
 
 export enum RoutePath {
     LOG_IN = "/login",
@@ -15,6 +18,9 @@ export enum RoutePath {
     LOG_OUT = "/log_out",
     NOTIFICATIONS = "/notifications",
     SETTINGS = "/settings",
+    MESSAGES="/messages",
+    REMOVED_MESSAGES="/removed_messages",
+    CREATE_MESSAGE="/create_message"
 }
 export const defaultSidebarNavItems: SidebarNavItem[] = [
     {
@@ -23,19 +29,46 @@ export const defaultSidebarNavItems: SidebarNavItem[] = [
         icon: MdHome,
     },
     {
-        name: "Сообщение",
+        name: "Notifications",
         path: RoutePath.NOTIFICATIONS,
         icon: MdNotifications,
     },
     {
-        name: "Настройки",
+        name: "Setting",
         path: RoutePath.SETTINGS,
         icon: MdSettings,
     },
     {
-        name: "Выход",
+        name:"inbox",
+        path:RoutePath.MESSAGES,
+        icon:MdEmail
+    },
+    {
+        name: "Logout",
         path: RoutePath.LOG_OUT,
         icon: MdLogout,
+    }
+]
+export const messagesSidebarNavItems:SidebarNavItem[]= [
+    {
+        name:"Create message",
+        path:RoutePath.CREATE_MESSAGE,
+        icon:MdOutlineCreate
+    },
+    {
+        name:"Check messages",
+        path:RoutePath.MESSAGES,
+        icon:MdEmail
+    },
+    {
+        name:"Removed messages",
+        path:RoutePath.REMOVED_MESSAGES,
+        icon:MdDeleteForever
+    },
+    {
+        name: "home",
+        path: RoutePath.HOME,
+        icon: MdHome,
     }
 ]
 
@@ -56,9 +89,26 @@ export const routes: Route[] = [
         path: RoutePath.NOTIFICATIONS,
         component: Notifications,
         sidebarNavItems: defaultSidebarNavItems
+    },
+    {
+        name:"messages",
+        path:RoutePath.MESSAGES,
+        component: Messages,
+        sidebarNavItems:messagesSidebarNavItems
+    },
+    {
+        name:"createMeassage",
+        path:RoutePath.CREATE_MESSAGE,
+        component:CreateMessage,
+        sidebarNavItems:messagesSidebarNavItems
+    },
+    {
+        name:"removedMessages",
+        path:RoutePath.REMOVED_MESSAGES,
+        component:RemovedMessages,
+        sidebarNavItems:messagesSidebarNavItems
     }
 ];
-
 
 export interface SidebarNavItem {
     name: string;

@@ -7,6 +7,7 @@ export const Sidebar = styled.nav`
     grid-area: sidebar;
     width: 100px;
     margin-top:40px;
+    min-height:100vh;
 `;
 export const SidebarLabel = styled.label`
     color:white;
