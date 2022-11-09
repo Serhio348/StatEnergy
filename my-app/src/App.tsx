@@ -3,16 +3,17 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { RoutePath, routes } from './routes'
 import Header from './component/header/Header'
 import Error from './pages/Error'
+import Layout from './component/layout/Layout'
 
 import './App.scss'
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <div className="app-container">
-        <Header />
+    <div className="app-container">
+      <Header />
+      <BrowserRouter>
         <Routes>
-          <Route>
+          <Route path="/" element={<Layout />}>
             {routes.map((route) => (
               <Route
                 index={RoutePath.HOME === route.path}
@@ -24,8 +25,8 @@ const App: React.FC = () => {
           </Route>
           <Route path="*" element={<Error />} />
         </Routes>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </div>
   )
 }
 

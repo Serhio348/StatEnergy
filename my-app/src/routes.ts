@@ -6,7 +6,6 @@ import {
     MdSettings
 
 } from 'react-icons/md'
-
 import { Home, Logout, Notifications } from './pages';
 
 export enum RoutePath {
@@ -24,17 +23,17 @@ export const defaultSidebarNavItems: SidebarNavItem[] = [
         icon: MdHome,
     },
     {
-        name: "notifications",
+        name: "Сообщение",
         path: RoutePath.NOTIFICATIONS,
         icon: MdNotifications,
     },
     {
-        name: "settings",
+        name: "Настройки",
         path: RoutePath.SETTINGS,
         icon: MdSettings,
     },
     {
-        name: "logout",
+        name: "Выход",
         path: RoutePath.LOG_OUT,
         icon: MdLogout,
     }
@@ -53,7 +52,7 @@ export const routes: Route[] = [
         component: Logout
     },
     {
-        name: "notification",
+        name: "notifications",
         path: RoutePath.NOTIFICATIONS,
         component: Notifications,
         sidebarNavItems: defaultSidebarNavItems
